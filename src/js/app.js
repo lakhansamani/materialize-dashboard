@@ -24,6 +24,23 @@ app.config(function($stateProvider,$urlRouterProvider){
 		controller:'LoginCtrl',
 		data : {requireLogin : false }
 	})
+	.state('main',{
+		views: {
+			'@' : {templateUrl: 'modules/wrapper/layout.html'},
+			'top@main' : { templateUrl: 'modules/wrapper/menu.html',},
+			'left@main' : { templateUrl: 'modules/wrapper/side_menu.html',},
+			'content@main' : { templateUrl: 'modules/wrapper/wrap.html',},
+		},
+	})
+	.state('main.home',{
+		url:'/home',
+		views:{
+			'mainSection@main':{
+				templateUrl:'modules/home/home.html'
+			}
+		},
+		data:{requireLogin:true}
+	})
   $urlRouterProvider.otherwise('/login');
 });
 
