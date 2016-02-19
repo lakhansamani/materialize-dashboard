@@ -2,7 +2,14 @@
   margin-top: 50px;
 }
 .mainSection{
-  margin-left: 100px;
+  margin-left: 170px;
+}
+.custom-text{
+	font-size: 25px
+	font-weight:bolder;
+}
+.padit{
+  padding: 5px;
 }
 @media only screen and (max-width: 40em) {
   .mainSection{

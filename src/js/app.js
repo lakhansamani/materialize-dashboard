@@ -32,13 +32,19 @@ app.config(function($stateProvider,$urlRouterProvider){
 			'content@main' : { templateUrl: 'modules/wrapper/wrap.html',},
 		},
 	})
-	.state('main.home',{
-		url:'/home',
+	.state('main.dashboard',{
+		url:'/dashboard',
 		views:{
 			'mainSection@main':{
-				templateUrl:'modules/home/home.html'
+				templateUrl:'modules/dashboard/dashboard.html',
+				controller:'DashboardCtrl'
 			}
 		},
+		data:{requireLogin:true}
+	})
+	.state('logout',{
+		url:'/logout',
+		controller:'LogoutCtrl',
 		data:{requireLogin:true}
 	})
   $urlRouterProvider.otherwise('/login');
@@ -57,7 +63,7 @@ app.run(function($rootScope, $state, $location,$stateParams){
 			}
 			else{
 				event.preventDefault();
-				$state.go('main.home', null, {notify: false}).then(function (state) {
+				$state.go('main.dashboard', null, {notify: false}).then(function (state) {
 					$rootScope.$broadcast('$stateChangeSuccess', state, null);
 				});
 			}
