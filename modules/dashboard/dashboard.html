@@ -1,57 +1,7 @@
 <br/>
-<div>
+<div >
 	<div class="row">
-		<div class="col l3">
-			<div class="card">
-				<div class="row">
-					<div class="col l4">
-						<i class="material-icons medium padit">email</i>
-					</div>
-					<div class="col l8">
-						<p class="grey-text custom-text">12 Unread mail</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col l3">
-			<div class="card">
-				<div class="row">
-					<div class="col l4">
-						<i class="material-icons medium padit">build</i>
-					</div>
-					<div class="col l8">
-						<p class="grey-text custom-text">Manage contents</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col l3">
-			<div class="card">
-				<div class="row">
-					<div class="col l4">
-						<i class="material-icons medium padit">done</i>
-					</div>
-					<div class="col l8">
-						<p class="grey-text custom-text">20 TODO</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col l3">
-			<div class="card">
-				<div class="row">
-					<div class="col l4">
-						<i class="material-icons medium padit">note</i>
-					</div>
-					<div class="col l8">
-						<p class="grey-text custom-text">102 New notes</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col l6">
+		<div class="col l6 s12 m12">
 			<div class="card">
 				<div class="card-content">
 					<h5 class="grey-text">Growth</h5>
@@ -59,6 +9,41 @@
 						chart-labels="labels" chart-legend="true" chart-series="series"
 						chart-click="onClick" >
 					</canvas>
+				</div>
+			</div>
+		</div>
+		<div class="col l6 s12 m12">
+			<div class="card">
+				<div class="card-content">
+					<h5 class="grey-text">Sales Report</h5>
+					<canvas id="bar" class="chart chart-bar"
+						chart-data="data" chart-labels="labels"> chart-series="series"
+					</canvas>
+					<p>
+						This are the amazing report for the company, only need to looking to last month's report
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="row">
+		<div class="col l6 s12 m12">
+			<div class="card">
+				<div class="card-content">
+					<h5 class="grey-text center">Pie Chart</h5>
+					<canvas id="pie" class="chart chart-pie"
+						chart-data="dataPie" chart-labels="labelsPie">
+					</canvas>
+				</div>
+			</div>
+		</div>
+		<div class="col l6 s12 m12">
+			<div class="card">
+				<div class="card-content">
+					<h5 class="grey-text center">Doughnut Chart</h5>
+					<canvas id="doughnut" class="chart chart-doughnut"
+						chart-data="dataPie" chart-labels="labelsPie">
+					</canvas> 
 				</div>
 			</div>
 		</div>
