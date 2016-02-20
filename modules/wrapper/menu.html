@@ -1,8 +1,29 @@
 <nav class="blue-grey">
 	<div class="nav-wrapper">
 		<a class="brand-logo hide-on-large-only">Materializa Dashboard</a>
-		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li><a ui-sref="logout">Logout</a></li>
+		<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+		<ul class="right hide-on-med-and-down" style="margin-right: 20px">
+			<li><a class='dropdown-button' data-beloworigin="true" href='#' data-activates='user-dw'><i class="material-icons left">account_circle</i>User<i class="material-icons right">arrow_drop_down</i></a></li>
+		</ul>
+		<ul id="slide-out" class="side-nav fixed" style="width:150px">
+			<li><a ui-sref='main.dashboard' style="font-weight: lighter;">Brand Image</a></li>
+			<li class="divider"></li>
+			<li><a ui-sref='main.dashboard'>Dashboard</a></li>
 		</ul>
 	</div>
 </nav>
+<ul id='user-dw' class='dropdown-content'>
+	<li><a ui-sref="logout">logout</a></li>
+</ul>
+<script type="text/javascript">	
+	$('.dropdown-button').dropdown({
+		inDuration: 300,
+		outDuration: 225,
+		constrain_width: false,
+		hover: true,
+		gutter: 0,
+		belowOrigin: false,
+		alignment: 'right'
+	});
+	$(".button-collapse").sideNav();
+</script>

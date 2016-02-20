@@ -28,7 +28,6 @@ app.config(function($stateProvider,$urlRouterProvider){
 		views: {
 			'@' : {templateUrl: 'modules/wrapper/layout.html'},
 			'top@main' : { templateUrl: 'modules/wrapper/menu.html',},
-			'left@main' : { templateUrl: 'modules/wrapper/side_menu.html',},
 			'content@main' : { templateUrl: 'modules/wrapper/wrap.html',},
 		},
 	})

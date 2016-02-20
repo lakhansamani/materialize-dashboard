@@ -1,9 +1,7 @@
 .top-margin{
   margin-top: 50px;
 }
-.mainSection{
-  margin-left: 170px;
-}
+
 .custom-text{
 	font-size: 25px
 	font-weight:bolder;
@@ -11,13 +9,12 @@
 .padit{
   padding: 5px;
 }
-@media only screen and (max-width: 40em) {
-  .mainSection{
-    margin-left: 0px;
-  }
+header, main, footer {
+  padding-left: 150px;
 }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  .mainSection{
-    margin-left: 0px;
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
   }
 }
