@@ -41,6 +41,16 @@ app.config(function($stateProvider,$urlRouterProvider){
 		},
 		data:{requireLogin:true}
 	})
+	.state('main.users',{
+		url:'/users',
+		views:{
+			'mainSection@main':{
+				templateUrl:'modules/users/userList.html',
+				controller:'UserCtrl'
+			}
+		},
+		data:{requireLogin:true}
+	})
 	.state('logout',{
 		url:'/logout',
 		controller:'LogoutCtrl',

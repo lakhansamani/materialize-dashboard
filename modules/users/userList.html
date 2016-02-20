@@ -1,0 +1,31 @@
+<br/>
+<div style="padding: 20px">
+	<span class="grey-text" style="font-size:25px;font-weight: bold;"> Users list</span>
+	<button class="btn right">Add new user</button>
+	<br/>
+	<div class="progress" ng-if="!done">
+	  <div class="indeterminate"></div>
+	</div>
+	<table class="bordered highlight responsive-table" ng-if="done">
+		<thead>
+			<tr>
+				<th data-field="id">id</th>
+				<th data-field="name">Name</th>
+				<th data-field="email">Email</th>
+				<th data-field="Age">Age</th>
+				<th data-field="gender">Gender</th>
+				<th data-field="gender">Action</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr ng-repeat="u in users">
+				<td>{{u.id}}</td>
+				<td>{{u.basicDetails.name}}</td>
+				<td>{{u.basicDetails.email}}</td>
+				<td>{{u.basicDetails.age}}</td>
+				<td>{{u.basicDetails.gender}}</td>
+				<td><a href="" class="btn">Edit</a>&nbsp;&nbsp;&nbsp;<a href="" class="btn red dark-4">Delete</a></td>
+			</tr>
+	</table>
+</div>
