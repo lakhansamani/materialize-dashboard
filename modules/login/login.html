@@ -1,31 +1,31 @@
 <div class="container">
-    <div class="row">
-        <div class="col l5 offset-l4 s9 offset-s1 top-margin">
-            <div class="card">
-                <div class="card-panel teal">
-                    <h5 class="white-text"><i class="material-icons">lock_outline</i> Login Panel</h5>
-                </div>
-                <div class="card-content">
-                    <form method="post" ng-model="user">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input ng-model="user.email" id="email" type="email" class="validate" required="required">
-                                <label for="email">Email</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input ng-model="user.password" id="password" type="password" class="validate" required="required">
-                                <label for="password">Password</label>
-                            </div>
-                        </div>
-                        <button ng-click="loginAction()" class="btn waves-effect waves-light" type="submit" name="action">Submit
-                           <i class="material-icons right">send</i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div class="chip red darken-4" role="alert" ng-if="show_message"><span ng-bind="message" class="white-text"></span></div>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col l5 offset-l4 s9 offset-s1 top-margin">
+			<div class="card">
+				<div class="card-panel teal">
+					<h5 class="white-text"><i class="material-icons">lock_outline</i> Login Panel</h5>
+				</div>
+				<div class="card-content">
+					<form method="post" ng-model="user">
+						<div class="row">
+							<div class="input-field col s12">
+								<input ng-model="user.email" id="email" type="email" class="validate" required="required">
+								<label for="email">Email</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input ng-model="user.password" id="password" type="password" class="validate" required="required">
+								<label for="password">Password</label>
+							</div>
+						</div>
+						<button ng-click="loginAction()" class="btn waves-effect waves-light" type="submit" name="action">Submit
+							<i class="material-icons right">send</i>
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="chip red darken-4" role="alert" ng-if="show_message"><span ng-bind="message" class="white-text"></span></div>
+		</div>
+	</div>
 </div>
