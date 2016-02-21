@@ -4,6 +4,5 @@ app.controller('UserCtrl',['$scope','dataService',function($scope,dataService){
 	dataService.getData().then(function(data){
 		$scope.users=data.data;
 		$scope.done=true;
-		console.log($scope.users)
 	})
 }]);

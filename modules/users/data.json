@@ -52,41 +52,5 @@
 			"email":"twin@me.com",
 			"gender":"Female"
 		}
-	},
-	{
-		"id":7,
-		"basicDetails":{
-			"name":"Martin",
-			"age":20,
-			"email":"martin@me.com",
-			"gender":"Male"
-		}
-	},
-	{
-		"id":8,
-		"basicDetails":{
-			"name":"Martin",
-			"age":20,
-			"email":"martin@me.com",
-			"gender":"Male"
-		}
-	},
-	{
-		"id":9,
-		"basicDetails":{
-			"name":"Martin",
-			"age":20,
-			"email":"martin@me.com",
-			"gender":"Male"
-		}
-	},
-	{
-		"id":10,
-		"basicDetails":{
-			"name":"Martin",
-			"age":20,
-			"email":"martin@me.com",
-			"gender":"Male"
-		}
 	}
 ]

@@ -1,12 +1,12 @@
 <br/>
 <div style="padding: 20px">
 	<span class="grey-text" style="font-size:25px;font-weight: bold;"> Users list</span>
-	<button class="btn right">Add new user</button>
+	<a class="btn-floating btn-large waves-effect waves-light peal right modal-trigger" href="#addEdit"><i class="material-icons">add</i></a>
 	<br/>
 	<div class="progress" ng-if="!done">
-	  <div class="indeterminate"></div>
+		<div class="indeterminate"></div>
 	</div>
-	<table class="bordered highlight responsive-table" ng-if="done">
+	<table class="bordered responsive-table" ng-if="done" id="dataTable">
 		<thead>
 			<tr>
 				<th data-field="id">id</th>
@@ -25,7 +25,51 @@
 				<td>{{u.basicDetails.email}}</td>
 				<td>{{u.basicDetails.age}}</td>
 				<td>{{u.basicDetails.gender}}</td>
-				<td><a href="" class="btn">Edit</a>&nbsp;&nbsp;&nbsp;<a href="" class="btn red dark-4">Delete</a></td>
+				<td><a href="" class=""><i class="material-icons">mode_edit</i></a>&nbsp;&nbsp;&nbsp;<a href="" class=""><i class="material-icons">delete</i></a></td>
 			</tr>
 	</table>
 </div>
+<div id="addEdit" class="modal">
+	<div class="modal-content">
+		<h4>User Details Form</h4>
+		<div class="row">
+			<form class="col s12" ng-model="user">
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="last_name" ng-model="user.name" type="text" class="validate">
+						<label for="last_name">Name</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="email" type="email" class="validate" mg-model="user.email">
+						<label for="email">Email</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="age" type="number" class="validate" mg-model="user.age">
+						<label for="age">Age</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<label for="gender">Gender</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input name="gender" type="radio" id="male" />
+						<label for="male">Male</label>
+						<input name="gender" type="radio" id="female" />
+						<label for="female">Female</label>
+						<a href="#/users" class=" modal-action modal-close waves-effect waves-green btn right">Save</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$('.modal-trigger').leanModal();
+</script>
