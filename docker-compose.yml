@@ -1,0 +1,13 @@
+# v2 sintax
+version: '2'
+
+services:
+
+  app:
+    image: allanzi/node:latest
+    container_name: materialize-dashboard-app
+    command: npm start
+    volumes:
+      - .:/var/www/app
+    ports:
+      - 8000:8000
